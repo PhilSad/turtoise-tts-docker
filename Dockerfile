@@ -8,6 +8,7 @@ RUN yes | pip3 install -r requirements.txt
 
 COPY . .
 
+RUN yes | apt install git
 RUN git clone https://github.com/jnordberg/tortoise-tts.git
 RUN cd tortoise-tts && python3 setup.py install
 
